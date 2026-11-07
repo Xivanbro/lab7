@@ -7,9 +7,7 @@ using namespace std;
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    double x, y, Y, Z;
-    double sum = 0;
-    double mult = 1;
+    double x, y, Y, Z, sum, mult;
 
     cout << "Введіть x (x > 0): ";
     cin >> x;
