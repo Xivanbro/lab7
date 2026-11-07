@@ -1,5 +1,7 @@
 #include <iostream>
-#include "windows.h"
+#include <math.h>
+#include <iomanip>
+#include <windows.h>
 
 using namespace std;
 
@@ -7,17 +9,17 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    int a;
-    double p, s;
-    cout << "Введіть довжину сторони квадрата (ціле число): ";
-    cin >> a;
+    double x_start = 2.0;
+    double x_end = 3.0;
+    double step = 0.1;
 
-    p = 4 * a;
-    s = a * a;
-    
-    cout << "Периметр клумби: " << p << endl;
-    cout << "Площа клумби: " << s << endl;
+    double x = x_start;
 
-    system("pause");
+    while (x <= x_end) {
+        double y = log(pow(x, 2)) + pow(x, 2) + 2;
+        cout << setw(10) << x << setw(15) << y << endl;
+        x += step;
+    }
+system("pause");
     return 0;
 }
